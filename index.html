@@ -11,21 +11,23 @@ A fixed navbar will go here
 
 <img src="images/stars-background.jpg" alt="background" width="100%" height="100%">
 
-<div id="intro">
-	<section class="text">
+<div class="text">
+	<section id="about">
 		<span>About Me</span>
 	</section>
 	<a class="btn btn-primary scroll" href="#links">Useful Links</a>   <a class="btn btn-primary scroll" href="#contact">Contact Me</a> 
 </div>
 
-<div id="links">
-LinkedIn<br>
-Github<br>
-Medicode
+<div class="text">
+	<section id="links">
+		<span>LinkedIn<br>Github<br>Medicode</span>
+	</section>
 </div>
 
-<div id="contact">
-myemail
+<div class="text">
+<section id="contact">
+		<span>myemail</span>
+	</section>
 </div>
 
 	<script>
@@ -60,6 +62,8 @@ myemail
 	  $('section').parallax({ "coeff": 1.15 });
 	  // $('section').parallax({ "coeff":1.15 });
 	</script>
+
+
 	<script>
 	  var hashTagActive = "";
 	  $(".scroll").click(function (event) {
