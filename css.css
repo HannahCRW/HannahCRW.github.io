@@ -1,0 +1,29 @@
+body {
+  background-color: yellow;
+}
+
+nav {
+  background-color: green;
+}
+
+#intro {
+  background-color: blue;
+  height: 150px;
+  margin-bottom: 50px;
+}
+
+#links {
+  background-color: blue;
+  height: 150px;
+  margin-bottom: 50px;
+}
+
+#contact {
+  background-color: blue;
+  height: 150px;
+  margin-bottom: 50px;
+}
+
+.btn.btn-primary.scroll {
+  background-color: red;
+}

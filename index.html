@@ -1,6 +1,80 @@
 <!DOCTYPE html>
 <head>
 <title>Hannah Wight</title>
+<link rel="stylesheet" type="text/css" href="css.css">
 </head>
+
 <body>
+<nav>
+A fixed navbar will go here
+</nav>
+
+<section id="intro">
+About Me <br>
+<a class="btn btn-primary scroll" href="#links">Useful Links</a>   <a class="btn btn-primary scroll" href="#contact">Contact Me</a> 
+</section>
+
+<section id="links">
+LinkedIn<br>
+Github<br>
+Medicode
+</section>
+
+<section id="contact">
+myemail
+</section>
+
+
+	<script>
+	  // The plugin code
+	  (function($){
+	    $.fn.parallax = function(options){
+	      var $$ = $(this);
+	      offset = $$.offset();
+	      console.log(offset)
+	      var defaults = {
+	        "start": 0,
+	        "stop": offset.top + $$.height(),
+	        "coeff": 0.95
+	      };
+	      var opts = $.extend(defaults, options);
+	      return this.each(function(){
+	        $(window).bind('scroll', function() {
+	          windowTop = $(window).scrollTop();
+	          if((windowTop >= opts.start) && (windowTop <= opts.stop)) {
+	            newCoord = windowTop * opts.coeff;
+	            $$.css({
+	                "background-position": "0 "+ newCoord + "px"
+	            });
+	          }
+	        });
+	      });
+	    };
+	  })(jQuery);
+	  
+	  // call the plugin
+	  $('.text').parallax({ "coeff": 0.8 });
+	  $('#image').parallax({ "coeff": -0.2 });
+	  // $('section').parallax({ "coeff":1.15 });
+	</script>
+	<script>
+	  var hashTagActive = "";
+	  $(".scroll").click(function (event) {
+	    if(hashTagActive != this.hash) { //this will prevent if the user click several times the same link to fre	the scroll.
+	        event.preventDefault();
+	        //calculate destination place
+	        var dest = 0;
+	        if ($(this.hash).offset().top > $(document).height() - $(window).height()) {
+	            dest = $(document).height() - $(window).height();
+	        } else {
+	            dest = $(this.hash).offset().top;
+	        }
+	        //go to destination
+	        $('html,body').animate({
+	            scrollTop: dest
+	        }, 750, 'swing');
+	        hashTagActive = this.hash;
+	    }
+	});
+	</script>
 </body>
