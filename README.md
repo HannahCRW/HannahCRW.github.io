@@ -1,5 +1,5 @@
-My Github Pages Website
-=======================
+My Website
+==========
 
 Created using Github Pages
 --------------------------
