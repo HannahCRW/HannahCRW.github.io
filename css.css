@@ -4,25 +4,30 @@ body {
 
 nav {
   background-color: green;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  z-index: 500;
+  height: 10%;
+  margin-bottom: 0;
 }
 
-#intro {
-  background-color: blue;
-  height: 150px;
-  margin-bottom: 50px;
+img {
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
-#links {
-  background-color: blue;
-  height: 150px;
-  margin-bottom: 50px;
+section {
+  position: relative;
+  background-color: white;
+  opacity: 0.9;
+  height: 375px;
+  margin-top: 15%;
+  margin-bottom: 15%;
+  z-index: 200;
 }
 
-#contact {
-  background-color: blue;
-  height: 150px;
-  margin-bottom: 50px;
-}
 
 .btn.btn-primary.scroll {
   background-color: red;
