@@ -1,87 +1,375 @@
 <!DOCTYPE html>
-<head>
-<title>Hannah Wight</title>
-<link rel="stylesheet" type="text/css" href="css.css">
-</head>
+<html lang="en">
 
-<body>
-<nav>
-A fixed navbar will go here
-</nav>
+    <head>
 
-<img src="images/stars-background.jpg" alt="background" width="100%" height="100%">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hannah Wight - Web Developer</title>
 
-<div class="text">
-	<section id="about">
-		<span>About Me</span>
-	</section>
-	<a class="btn btn-primary scroll" href="#links">Useful Links</a>   <a class="btn btn-primary scroll" href="#contact">Contact Me</a> 
-</div>
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Patua+One">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600">
+        
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="assets/css/form-elements.css">
+        <link rel="stylesheet" href="assets/css/buttons.css">
+        <link rel="stylesheet" href="assets/ultimate-flat-social-icons/ultm-css/ultm-general.css">
+		<link rel="stylesheet" href="assets/ultimate-flat-social-icons/ultm-css/ultm-sizes.css">
+		<link rel="stylesheet" href="assets/ultimate-flat-social-icons/ultm-css/ultm-shapes.css">
+		<link rel="stylesheet" href="assets/ultimate-flat-social-icons/ultm-css/ultm-bg-colors.css">
+		<link rel="stylesheet" href="assets/ultimate-flat-social-icons/ultm-css/ultm-bg-images-48.css">
+		<link rel="stylesheet" href="assets/ultimate-flat-social-icons/ultm-css/ultm-effects.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/media-queries.css">
 
-<div class="text">
-	<section id="links">
-		<span>LinkedIn<br>Github<br>Medicode</span>
-	</section>
-</div>
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
-<div class="text">
-<section id="contact">
-		<span>myemail</span>
-	</section>
-</div>
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.ico" type="image/x-icon">
+				<link rel="icon" href="assets/ico/favicon.ico" type="image/x-icon">
 
-	<script>
-	  // The plugin code
-	  (function($){
-	    $.fn.parallax = function(options){
-	      var $$ = $(this);
-	      offset = $$.offset();
-	      console.log(offset)
-	      var defaults = {
-	        "start": 0,
-	        "stop": offset.top + $$.height(),
-	        "coeff": 0.95
-	      };
-	      var opts = $.extend(defaults, options);
-	      return this.each(function(){
-	        $(window).bind('scroll', function() {
-	          windowTop = $(window).scrollTop();
-	          if((windowTop >= opts.start) && (windowTop <= opts.stop)) {
-	            newCoord = windowTop * opts.coeff;
-	            $$.css({
-	                "background-position": "0 "+ newCoord + "px"
-	            });
-	          }
-	        });
-	      });
-	    };
-	  })(jQuery);
-	  
-	  // call the plugin
-	  $('img').parallax({ "coeff": -1.5 });
-	  $('section').parallax({ "coeff": 1.15 });
-	  // $('section').parallax({ "coeff":1.15 });
-	</script>
+    </head>
 
+    <body>
 
-	<script>
-	  var hashTagActive = "";
-	  $(".scroll").click(function (event) {
-	    if(hashTagActive != this.hash) { //this will prevent if the user click several times the same link to fre	the scroll.
-	        event.preventDefault();
-	        //calculate destination place
-	        var dest = 0;
-	        if ($(this.hash).offset().top > $(document).height() - $(window).height()) {
-	            dest = $(document).height() - $(window).height();
-	        } else {
-	            dest = $(this.hash).offset().top;
-	        }
-	        //go to destination
-	        $('html,body').animate({
-	            scrollTop: dest
-	        }, 750, 'swing');
-	        hashTagActive = this.hash;
-	    }
-	});
-	</script>
-</body>
+		<!-- Top menu -->
+		<nav>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2 nav-logo">
+						<a href="">Areta - Responsive Agency Portfolio Template</a>
+					</div>
+					<div class="col-sm-10 nav-links">
+						<div class="show-menu">
+							<a href=""><i class="fa fa-bars"></i></a>
+						</div>
+						<a class="scroll-link" href="#top-content">Home</a>
+						<a class="scroll-link" href="#portfolio">Portfolio</a>
+						<a class="scroll-link" href="#skills">Skills</a>
+						<a class="scroll-link" href="#about">About Me</a>
+						<a class="scroll-link" href="#contact">Contact</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		
+        <!-- Top content -->
+        <div class="top-content">
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 text">
+                        	<div class="logo">
+                        		<h1>
+                        			<a href="">Hello, I'm Hannah</a>
+                        		</h1>
+                        	</div>
+                        	<div class="menu">
+								<a class="scroll-link button-1" href="#portfolio"><i class="fa fa-picture-o"></i> Portfolio</a>
+								<a class="scroll-link button-1" href="#skills"><i class="fa fa-pencil"></i> Skills</a>
+								<a class="scroll-link button-1" href="#about"><i class="fa fa-user"></i> About Me</a>
+								<a class="scroll-link button-1" href="#contact"><i class="fa fa-map-marker"></i> Contact</a>
+                        	</div>
+                            <div class="description">
+                            	Send me a text message using Twilio
+                            	<!-- Send me a text message using Twilio -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Portfolio -->
+        <div class="portfolio-container" id="go-to-portfolio">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-sm-12 portfolio">
+	                    <h2>Work we've done</h2>
+	                    <p>
+	                    	Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
+	                    	aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam.
+	                    </p>
+	                </div>
+	            </div>
+	            <div class="row">
+	            	<div class="col-sm-12 portfolio-filters">
+	            		<a href="#" class="filter-all active">All</a> / 
+	            		<a href="#" class="filter-design">Design</a> / 
+	            		<a href="#" class="filter-development">Development</a> / 
+	            		<a href="#" class="filter-branding">Branding</a>
+	            	</div>
+	            </div>
+	            <div class="row">
+	            	<div class="col-sm-12 portfolio-masonry">
+		                <div class="portfolio-box design">
+		                	<img src="assets/img/portfolio/1.jpg" alt="" data-at2x="assets/img/portfolio/1.jpg">
+		                	<div class="portfolio-box-text-container">
+		                		<div class="portfolio-box-text">
+		                			<h3>Project 1</h3>
+		                			<p>January 2014</p>
+		                		</div>
+		                	</div>
+		                </div>
+		                <div class="portfolio-box development">
+		                	<img src="assets/img/portfolio/2.jpg" alt="" data-at2x="assets/img/portfolio/2.jpg">
+		                	<div class="portfolio-box-text-container">
+		                		<div class="portfolio-box-text">
+		                			<h3>Project 2</h3>
+		                			<p>January 2014</p>
+		                		</div>
+		                	</div>
+		                </div>
+		                <div class="portfolio-box branding">
+		                	<img src="assets/img/portfolio/3.jpg" alt="" data-at2x="assets/img/portfolio/3.jpg">
+		                	<div class="portfolio-box-text-container">
+		                		<div class="portfolio-box-text">
+		                			<h3>Project 3</h3>
+		                			<p>January 2014</p>
+		                		</div>
+		                	</div>
+		                </div>
+		                <div class="portfolio-box development">
+		                	<img src="assets/img/portfolio/4.jpg" alt="" data-at2x="assets/img/portfolio/4.jpg">
+		                	<div class="portfolio-box-text-container">
+		                		<div class="portfolio-box-text">
+		                			<h3>Project 4</h3>
+		                			<p>February 2014</p>
+		                		</div>
+		                	</div>
+		                </div>
+		                <div class="portfolio-box design">
+		                	<img src="assets/img/portfolio/5.jpg" alt="" data-at2x="assets/img/portfolio/5.jpg">
+		                	<div class="portfolio-box-text-container">
+		                		<div class="portfolio-box-text">
+		                			<h3>Project 5</h3>
+		                			<p>February 2014</p>
+		                		</div>
+		                	</div>
+		                </div>
+		                <div class="portfolio-box development">
+		                	<img src="assets/img/portfolio/6.jpg" alt="" data-at2x="assets/img/portfolio/6.jpg">
+		                	<div class="portfolio-box-text-container">
+		                		<div class="portfolio-box-text">
+		                			<h3>Project 6</h3>
+		                			<p>March 2014</p>
+		                		</div>
+		                	</div>
+		                </div>
+		                <div class="portfolio-box design">
+		                	<img src="assets/img/portfolio/7.jpg" alt="" data-at2x="assets/img/portfolio/7.jpg">
+		                	<div class="portfolio-box-text-container">
+		                		<div class="portfolio-box-text">
+		                			<h3>Project 7</h3>
+		                			<p>March 2014</p>
+		                		</div>
+		                	</div>
+		                </div>
+		                <div class="portfolio-box development">
+		                	<img src="assets/img/portfolio/8.jpg" alt="" data-at2x="assets/img/portfolio/8.jpg">
+		                	<div class="portfolio-box-text-container">
+		                		<div class="portfolio-box-text">
+		                			<h3>Project 8</h3>
+		                			<p>March 2014</p>
+		                		</div>
+		                	</div>
+		                </div>
+		                <div class="portfolio-box branding">
+		                	<img src="assets/img/portfolio/9.jpg" alt="" data-at2x="assets/img/portfolio/9.jpg">
+		                	<div class="portfolio-box-text-container">
+		                		<div class="portfolio-box-text">
+		                			<h3>Project 9</h3>
+		                			<p>April 2014</p>
+		                		</div>
+		                	</div>
+		                </div>
+		                <div class="portfolio-box design">
+		                	<img src="assets/img/portfolio/10.jpg" alt="" data-at2x="assets/img/portfolio/10.jpg">
+		                	<div class="portfolio-box-text-container">
+		                		<div class="portfolio-box-text">
+		                			<h3>Project 10</h3>
+		                			<p>April 2014</p>
+		                		</div>
+		                	</div>
+		                </div>
+		                <div class="portfolio-box development">
+		                	<img src="assets/img/portfolio/11.jpg" alt="" data-at2x="assets/img/portfolio/11.jpg">
+		                	<div class="portfolio-box-text-container">
+		                		<div class="portfolio-box-text">
+		                			<h3>Project 11</h3>
+		                			<p>May 2014</p>
+		                		</div>
+		                	</div>
+		                </div>
+		                <div class="portfolio-box branding">
+		                	<img src="assets/img/portfolio/12.jpg" alt="" data-at2x="assets/img/portfolio/12.jpg">
+		                	<div class="portfolio-box-text-container">
+		                		<div class="portfolio-box-text">
+		                			<h3>Project 12</h3>
+		                			<p>May 2014</p>
+		                		</div>
+		                	</div>
+		                </div>
+	                </div>
+	            </div>
+	        </div>
+        </div>
+        
+        <!-- Skills -->
+        <div class="skills-container">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-sm-12 skills">
+	                    <h2>My Skills</h2>
+	                    <div class="skills-active"></div>
+	                    <div class="skills-single">
+	                    	<p>
+	                    		Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit 
+	                    		lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, 
+	                    		quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut.
+	                    	</p>
+	                    	<div class="skills-single-icon"><span>95%</span><br>Design</div>
+	                    </div>
+	                    <div class="skills-single">
+	                    	<p>
+	                    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt 
+	                    		ut labore et. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+	                    		incididunt ut labore et.
+	                    	</p>
+	                    	<div class="skills-single-icon"><span>99%</span><br>UI / UX</div>
+	                    </div>
+	                    <div class="skills-single">
+	                    	<p>
+	                    		Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit 
+	                    		lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, 
+	                    		quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut.
+	                    	</p>
+	                    	<div class="skills-single-icon"><span>87%</span><br>Branding</div>
+	                    </div>
+	                    <div class="skills-single">
+	                    	<p>
+	                    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt 
+	                    		ut labore et. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+	                    		incididunt ut labore et.
+	                    	</p>
+	                    	<div class="skills-single-icon"><span>74%</span><br>Development</div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+        </div>
+                
+        <!-- About Me -->
+        <div class="about-container" id="go-to-about">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-sm-12 about">
+	                    <h2>About Me</h2>
+	                    <p>
+	                    	Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit 
+	                    	lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam.
+	                    </p>
+	                </div>
+	            </div>
+	            <div class="row">
+	                <div class="col-sm-4 about-me-box-1">
+	                	<div class="about-me-photo-container">
+		                	<div class="about-me-photo">
+		                		<img src="assets/img/team/hannah_01.jpg" alt="" data-at2x="assets/img/team/hannah_01.jpg">
+		                		<div class="about-me-social">
+		                			<a href="https://twitter.com/banrionaiasc" target="_blank"><i class="fa fa-twitter"></i></a>
+		                			<a href="http://lnkd.in/dX7iFPR" target="_blank"><i class="fa fa-linkedin"></i></a>
+		                			<a href="mailto:hannah_wight@hotmail.com"><i class="fa fa-envelope" title="hannah_wight@hotmail.com"></i></a>
+		                			<p>Developer</p>
+		                		</div>
+		                	</div>
+	                	</div>
+	                    <h3>John Doe</h3>
+	                    <p>
+	                    	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
+	                    	labore et.
+	                    </p>
+	                </div>
+	            </div>
+	        </div>
+        </div>
+
+        <!-- Contact us -->
+        <div class="container" id="go-to-contact">
+            <div class="row">
+                <div class="col-sm-12 contact">
+                    <h2>Contact Me</h2>
+                    <p>
+                    	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
+	                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-7 contact-form">
+                    <h3>Send us a message</h3>
+                    <form method="post" action="assets/contact.php">
+                        <input type="text" name="email" placeholder="Email..." class="contact-email">
+                        <input type="text" name="subject" placeholder="Subject..." class="contact-subject">
+                        <textarea name="message" placeholder="Message..." class="contact-message"></textarea>
+                        <button type="submit">Send message</button>
+                    </form>
+                </div>
+                <div class="col-sm-5 contact-address">
+                	<h3>Based Here</h3>
+                    <div class="map"></div>
+                    <h3>Contact details</h3>
+                    <p><i class="fa fa-map-marker"></i>Wadhurst, East Sussex, UK</p>
+                    <p><i class="fa fa-envelope"></i>Email: <a href="">hannah_wight@hotmail.com</a></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer>
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-sm-7 footer-copyright">
+	                    <p>&copy; Copyright - <a href="">Areta</a> Responsive Bootstrap Template<br>All rights reserved.</p>
+	                </div>
+	                <div class="col-sm-5 footer-social">
+	                    <a class="ultm ultm-facebook ultm-48 ultm-square ultm-gray-to-color" href=""></a>
+	                    <a class="ultm ultm-twitter ultm-48 ultm-square ultm-gray-to-color" href=""></a>
+	                    <a class="ultm ultm-google-plus-1 ultm-48 ultm-square ultm-gray-to-color" href=""></a>
+	                    <a class="ultm ultm-dribbble ultm-48 ultm-square ultm-gray-to-color" href=""></a>
+	                    <a class="ultm ultm-pinterest ultm-48 ultm-square ultm-gray-to-color" href=""></a>
+	                </div>
+	            </div>
+	        </div>
+        </footer>
+        
+
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.10.2.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/masonry.pkgd.min.js"></script>
+        <script src="assets/twitter/jquery.tweet.min.js"></script>
+        <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        <script src="assets/js/jquery.ui.map.min.js"></script>
+        <script src="assets/js/retina-1.1.0.min.js"></script>
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+        
+        <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+
+    </body>
+
+</html>
+
