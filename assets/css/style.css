@@ -513,9 +513,9 @@ nav .show-menu a:hover { color: #fff; }
     height: 255px;
     margin: 0 auto;
     border: 2px solid #eee;
-    -moz-border-radius: 75px;
-	-webkit-border-radius: 75px;
-	border-radius: 75px;
+    -moz-border-radius: 120px;
+	-webkit-border-radius: 120px;
+	border-radius: 120px;
 	-o-transition: all .3s;
     -moz-transition: all .3s;
     -webkit-transition: all .3s;
@@ -527,10 +527,10 @@ nav .show-menu a:hover { color: #fff; }
 	position: relative;
     width: 243px;
     height: 243px;
-    margin: auto;
-    -moz-border-radius: 73px;
-	-webkit-border-radius: 73px;
-	border-radius: 73px;
+    margin: 3.5px;
+    -moz-border-radius: 120px;
+	-webkit-border-radius: 120px;
+	border-radius: 120px;
     overflow: hidden;
 }
 
@@ -538,15 +538,34 @@ nav .show-menu a:hover { color: #fff; }
 	width: 100%;
 }
 
-.about-me-box-1 .about-me-photo .about-me-social {
+.about-me-box-1 .about-me-photo {
 	position: absolute;
+	float:left;
+	display: inline-block;
 	top: 112px;
 	left: 0;
     width: 250px;
-    height: 75px;
-    padding-top: 12px;
     background: #3d3d3d;
     background: rgba(61, 61, 61, 0.8);
+    z-index: 100;
+}
+
+.about-me-social {
+	position: relative;
+	top: -125px;
+	left: 0;
+	width: 250px;
+	height: 75px;
+	padding-top: 25px;
+	background: #3d3d3d;
+    background: rgba(61, 61, 61, 0.5);
+    z-index: 500;
+}
+
+.about-text {
+	height: 300px;
+	float:left;
+	display: inline-block;
 }
 
 .about-me-box-1 .about-me-photo .about-me-social, 
