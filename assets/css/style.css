@@ -47,7 +47,12 @@ nav {
     text-transform: uppercase;
 }
 
-nav .nav-links { text-align: right; }
+nav .nav-links {
+	float:right;
+	width: 35%;
+	min-width: 409px;
+	padding:0;
+}
 nav .nav-logo { text-align: left; }
 
 nav a {
@@ -58,15 +63,6 @@ nav a {
 }
 nav a:hover { color: #ccc; }
 nav a:focus { color: #fff; }
-
-nav .nav-logo a {
-	width: 150px;
-	height: 60px;
-	margin: 0;
-	padding: 0;
-	background: url(../img/logo.png) left center no-repeat;
-	text-indent: -9999px;
-}
 
 nav .show-menu {
 	display: none;
