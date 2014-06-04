@@ -610,8 +610,8 @@ nav .show-menu a:hover { color: #fff; }
     border: 1px solid rgba(0, 0, 0, 0);
 	cursor: pointer;
 	vertical-align: top;
-	font-size: 18px;
-    line-height: 32px;
+	font-size: 15px;
+    line-height: 30px;
 	-moz-border-radius: 71px;
 	-webkit-border-radius: 71px;
 	border-radius: 71px;
@@ -621,9 +621,12 @@ nav .show-menu a:hover { color: #fff; }
     -ms-transition: all .3s;
     transition: all .3s;
 }
-.skills-single-icon:hover { background: #9d435a; }
+.skills-single-icon:hover { 
+	background: rgba(255, 255, 255, .8);
+	color: #000;
+}
 
-.skills-single-icon.active { background: none; border-color: #fff; }
+.skills-single-icon.active { background: none; color: #fff; border-color: #fff; }
 .skills-single-icon.active:hover { background: none; }
 
 .skills-single-icon span {
@@ -777,8 +780,8 @@ footer {
 
 .footer-copyright p {
 	margin: 0;
-	font-size: 18px;
-    line-height: 32px;
+	font-size: 12px;
+    line-height: 25px;
 }
 
 .footer-copyright a { color: #fff; border-bottom: 1px dotted #eee; }
@@ -787,4 +790,5 @@ footer {
 .footer-social {
 	text-align: right;
 }
+
 

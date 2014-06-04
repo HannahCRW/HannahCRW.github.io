@@ -68,17 +68,17 @@ $(document).ready(function() {
         Background slideshow
     */
     $('.top-content').backstretch([
-      "assets/img/backgrounds/1.jpg", 
-      "assets/img/backgrounds/2.jpg", 
-      "assets/img/backgrounds/3.jpg"
+      "assets/img/backgrounds/sublimetextbackground.jpg", 
+      "assets/img/backgrounds/cathodebackground.jpg", 
+      "assets/img/backgrounds/medicodebackground.jpg"
     ], {duration: 3000, fade: 750});
     
-    $('.lets-talk').backstretch("assets/img/backgrounds/1.jpg");
-    $('.service-1').backstretch("assets/img/backgrounds/2.jpg");
-    $('.service-3').backstretch("assets/img/backgrounds/3.jpg");
-    $('.our-motto').backstretch("assets/img/backgrounds/1.jpg");
-    $('.latest-tweets').backstretch("assets/img/backgrounds/2.jpg");
-    $('.skills-container').backstretch("assets/img/backgrounds/3.jpg");
+    $('.lets-talk').backstretch("assets/img/backgrounds/sublimetextbackground.jpg");
+    $('.service-1').backstretch("assets/img/backgrounds/cathodebackground.jpg");
+    $('.service-3').backstretch("assets/img/backgrounds/medicodebackground.jpg");
+    $('.our-motto').backstretch("assets/img/backgrounds/sublimetextbackground.jpg");
+    $('.latest-tweets').backstretch("assets/img/backgrounds/cathodebackground.jpg");
+    $('.skills-container').backstretch("assets/img/backgrounds/sublimetextbackground.jpg");
     
     /*
         Testimonials

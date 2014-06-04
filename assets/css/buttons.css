@@ -4,8 +4,7 @@
 	height: 60px;
 	margin: 0;
     padding: 0 20px;
-    background: #3d3d3d;
-    background: rgba(0, 0, 0, .3);
+    background: rgba(0, 0, 0, .5);
     font-size: 18px;
     line-height: 58px;
     color: #fff;
@@ -16,8 +15,8 @@
 }
 
 .button-1:hover, .button-1:focus {
-	background: #9d435a;
-	color: #fff;
+	background: rgba(255, 255, 255, .8);
+	color: #000;
 }
 
 .button-1 i {
